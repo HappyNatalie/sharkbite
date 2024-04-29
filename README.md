@@ -5,17 +5,41 @@ As for performance the datapack doesn't have a massive effect on performance eve
 
 `Sharkbite is not a library that you have to unzip and import into your own datapack it will function just as another zip in the folder.`
 # Features
+
+New entity tags.
+
+`sharkbite_user:#sharkbite_user:targets` : This function acts as a whitelist of entities that the datapack effects. By defualt this just included all entities that commonly take damage from the player or other entities.
+````json
+{
+  "replace": false,
+  "values": [
+"player","armor_stand",
+"allay","axolotl","bat","camel","cat","chicken","cod","cow","donkey","frog","glow_squid","horse","mooshroom","mule","ocelot","parrot","pig","pufferfish","rabbit","salmon","sheep","skeleton_horse","sniffer","snow_golem","squid","strider","tadpole","tropical_fish","turtle","villager","wandering_trader","zombie_horse","armadillo",
+"bee","cave_spider","dolphin","drowned","enderman","fox","goat","iron_golem","llama","panda","piglin","polar_bear","spider","trader_llama","wolf","zombified_piglin",
+"blaze","creeper","elder_guardian","endermite","ender_dragon","evoker","ghast","guardian","hoglin","husk","magma_cube","phantom","piglin_brute","pillager","ravager","shulker","silverfish","skeleton","slime","stray","vex","vindicator","warden","witch","wither","wither_skeleton","zoglin","zombie","zombie_villager","giant","illusioner"
+  ]
+}
+````
+
+`sharkbite_user:#sharkbite_user:storegear` : This function acts as a whitelist of entities that will have their gear stored in an interaction. By defualt this is just a list of entities that commonly hold items.
+````json
+{
+    "replace": false,
+    "values": [
+  "player","armor_stand","drowned","enderman","fox","piglin","zombified_piglin","hoglin","husk","piglin_brute","pillager","skeleton","vex","vindicator","wither_skeleton","zombie","zombie_villager","giant"
+    ]
+  }
+````
+
 New function tags.
 
 This pack adds the following function tags.
 
-`#sharkbite_user:attacker_functions`
->This function tag is empty by default and is executed as and at any entity that deals damage to another entity. (This is executed before the defender function tag.)
+`#sharkbite_user:attacker_functions` : This function tag is empty by default and is executed as and at any entity that deals damage to another entity. (This is executed before the defender function tag.)
 ````json
 {"values": [],"replace": false}
 ````
-`#sharkbite_user:defender_functions`
->This function tag is empty by default and is executed as and at any entity that takes damage from another entity. (This is executed after the attacker function tag.)
+`#sharkbite_user:defender_functions` : This function tag is empty by default and is executed as and at any entity that takes damage from another entity. (This is executed after the attacker function tag.)
 ````json
 {"values": [],"replace": false}
 ````
