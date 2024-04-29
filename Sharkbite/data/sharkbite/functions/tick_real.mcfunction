@@ -1,0 +1,1 @@
+execute as @e[type=#sharkbite_user:targets] at @s run function sharkbite:entitytick

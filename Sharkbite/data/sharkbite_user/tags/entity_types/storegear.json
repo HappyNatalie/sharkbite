@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+  "player","armor_stand","drowned","enderman","fox","piglin","zombified_piglin",
+  "hoglin","husk","piglin_brute","pillager","skeleton","vex","vindicator","wither_skeleton","zombie","zombie_villager","giant"
+    ]
+  }

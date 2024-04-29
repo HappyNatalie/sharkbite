@@ -1,0 +1,1 @@
+execute if score %config_loaded% sharkbite.config matches 1 run function sharkbite:tick_real
