@@ -8,14 +8,14 @@ As for performance the datapack doesn't have a massive effect on performance eve
 
 New entity tags.
 
-`#sharkbite_user:targets` : This function acts as a whitelist of entities that the datapack effects. By defualt this just includes players. Feel free to add any more entities that you wish for it to track.
+`#sharkbite_user:targets` : This function acts as a whitelist of entities that the datapack effects. By defualt this just includes zombies. Feel free to add any more entities that you wish for it to track.
 
-If you wish for this list to include all valid targets (aka all entities that the pack is capable of detecting damage to) just add the `#sharkbite:full_target_list` tag to the targets tag and that will take care of it for you. I know most packs that use this will likley do this anyway but this is disabled by default for the sake of anyone who does not need the full functionality of it for a custom map or anything of the sort.
+If you wish for this list to include all valid targets (aka all entities that the pack is capable of detecting damage to) just add the `#sharkbite:full_target_list` tag to the targets tag and that will take care of it for you. I know most packs that use this will likley do this anyway but this is disabled by default for the sake of anyone who does not need the full functionality of it for a custom map or anything of the sort. Players are spesifically detected by an advancement to avoid checking their nbt data so they can not be disabled and should not be added to the whitelist. (It is very costly performance wise to check the NBT data of a player and adding them to the whitelist will cause the pack to check player data every tick for no reason)
 ````json
 {
   "replace": false,
   "values": [
-"player"
+"zombie"
   ]
 }
 ````
