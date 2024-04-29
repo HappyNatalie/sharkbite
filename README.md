@@ -1,27 +1,26 @@
 # Sharkbite
 Sharkbite is a library that helps you detect whenever any entity attacks another. This included npc on npc interactions unlike other libraries of the sort.
 
-As for performance the datapack doesn't have a massive effect on performance even if it is a bit more intensive than other datapacks. When tested ith 900 entities processing I gain around 2-6 mspt wiht the pack enabled vs it disabled. (Keep in mind this is very extreme conditions and given that the pack only processes entities that can take damage it will be VERY uncommon to see this bad of stress be put on it. Also my computer sucks ass.) 
+As for performance the datapack doesn't have a massive effect on performance even if it is a bit more intensive than other datapacks. When tested ith 900 entities processing I gain around 2-6 mspt wiht the pack enabled vs it disabled. (Keep in mind this is very extreme conditions and given that the pack only processes entities that are in the targets tag it will be VERY uncommon to see this bad of stress be put on it. Also my computer sucks ass.) 
 
 `Sharkbite is not a library that you have to unzip and import into your own datapack it will function just as another zip in the folder.`
 # Features
 
 New entity tags.
 
-`sharkbite_user:#sharkbite_user:targets` : This function acts as a whitelist of entities that the datapack effects. By defualt this just included all entities that commonly take damage from the player or other entities.
+`#sharkbite_user:targets` : This function acts as a whitelist of entities that the datapack effects. By defualt this just includes players. Feel free to add any more entities that you wish for it to track.
+
+If you wish for this list to include all valid targets (aka all entities that the pack is capable of detecting damage to) just add the `#sharkbite:full_target_list` tag to the targets tag and that will take care of it for you. I know most packs that use this will likley do this anyway but this is disabled by default for the sake of anyone who does not need the full functionality of it for a custom map or anything of the sort.
 ````json
 {
   "replace": false,
   "values": [
-"player","armor_stand",
-"allay","axolotl","bat","camel","cat","chicken","cod","cow","donkey","frog","glow_squid","horse","mooshroom","mule","ocelot","parrot","pig","pufferfish","rabbit","salmon","sheep","skeleton_horse","sniffer","snow_golem","squid","strider","tadpole","tropical_fish","turtle","villager","wandering_trader","zombie_horse","armadillo",
-"bee","cave_spider","dolphin","drowned","enderman","fox","goat","iron_golem","llama","panda","piglin","polar_bear","spider","trader_llama","wolf","zombified_piglin",
-"blaze","creeper","elder_guardian","endermite","ender_dragon","evoker","ghast","guardian","hoglin","husk","magma_cube","phantom","piglin_brute","pillager","ravager","shulker","silverfish","skeleton","slime","stray","vex","vindicator","warden","witch","wither","wither_skeleton","zoglin","zombie","zombie_villager","giant","illusioner"
+"player"
   ]
 }
 ````
 
-`sharkbite_user:#sharkbite_user:storegear` : This function acts as a whitelist of entities that will have their gear stored in an interaction. By defualt this is just a list of entities that commonly hold items.
+`#sharkbite_user:storegear` : This function acts as a whitelist of entities that will have their gear stored in an interaction. By defualt this is just a list of entities that commonly hold items.
 ````json
 {
     "replace": false,
